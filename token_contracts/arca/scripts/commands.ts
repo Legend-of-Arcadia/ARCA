@@ -26,7 +26,7 @@ export async function upgradePackage(
 
   const { modules, dependencies, digest } = JSON.parse(
     execSync(
-      `${SUI_BIN} move build --dump-bytecode-as-base64 --path ${packagePath} --install-dir ${tmpobj.name}`,
+      `${SUI_BIN} move build --with-unpublished-dependencies --dump-bytecode-as-base64 --path ${packagePath} --install-dir ${tmpobj.name} `,
       { encoding: "utf-8" }
     )
   );

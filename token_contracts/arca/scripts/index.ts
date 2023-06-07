@@ -31,14 +31,15 @@ async function getSigner(): Promise<SignerWithProvider> {
   // else return a HDSigner
   const provider = getProvider();
   if (process.env.NETWORK === "testnet" || process.env.NETWORK === "devnet") {
-    if (process.env.FORCE_HD) {
+    if (process.env.FORCE_HD === "true") {
       return new HDSigner(provider);
     }
     return new RawSigner(
-      new Ed25519Keypair({
-        secretKey: Buffer.from(process.env.PRIVATE_KEY!),
-        publicKey: Buffer.from(process.env.PUBLIC_KEY!),
-      }),
+      Ed25519Keypair.fromSecretKey(Buffer.from(process.env.PRIVATE_KEY!.slice(2), "hex"), { skipValidation: true }),
+      // new Ed25519Keypair({
+      //   secretKey: Buffer.from(process.env.PRIVATE_KEY!),
+      //   publicKey: Buffer.from(process.env.PUBLIC_KEY!),
+      // }),
       provider
     );
   } else {
