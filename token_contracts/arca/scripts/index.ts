@@ -12,6 +12,8 @@ import {
 } from "@mysten/sui.js";
 import { publishPackage, upgradePackage } from "./commands";
 import { HDSigner } from "./hdSigner";
+import { KmsSigner } from "./kmsSigner";
+
 
 export function getProvider(): JsonRpcProvider {
   switch (process.env.NETWORK) {
@@ -33,6 +35,9 @@ async function getSigner(): Promise<SignerWithProvider> {
   if (process.env.NETWORK === "testnet" || process.env.NETWORK === "devnet") {
     if (process.env.FORCE_HD === "true") {
       return new HDSigner(provider);
+    }
+    if (process.env.FORCE_KMS === "true") {
+      return new KmsSigner(provider);
     }
     return new RawSigner(
       Ed25519Keypair.fromSecretKey(Buffer.from(process.env.PRIVATE_KEY!.slice(2), "hex"), { skipValidation: true }),
