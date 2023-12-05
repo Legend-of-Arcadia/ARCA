@@ -5,7 +5,7 @@ published-at = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c945246264008
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
-multisig = {git = "https://github.com/Legend-of-Arcadia/Multisig.git", rev="master"}
+multisig = {git = "https://github.com/Legend-of-Arcadia/Multisig.git", rev="testnet"}
 
 [addresses]
 #loa =  "0x0"
