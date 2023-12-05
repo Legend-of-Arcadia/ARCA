@@ -8,7 +8,7 @@ Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-fram
 multisig = {git = "https://github.com/Legend-of-Arcadia/Multisig.git", rev="master"}
 
 [addresses]
-loa =  "0x0"
+#loa =  "0x0"
 Sui =  "0x2"
 std =  "0x1"
 loa = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
