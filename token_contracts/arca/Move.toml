@@ -1,7 +1,7 @@
 [package]
 name = "loa"
 version = "0.0.1"
-# published-at = "0xf0af6a4bdef4e4c520b5480a9470bc033833fce9306cb360f34eef5c0b468f86"
+published-at = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
