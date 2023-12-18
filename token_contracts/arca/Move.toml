@@ -1,14 +1,14 @@
 [package]
 name = "loa"
 version = "0.0.1"
-published-at = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
+#published-at = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
-multisig = {git = "https://github.com/Legend-of-Arcadia/Multisig.git", rev="testnet"}
+multisig = {git = "https://github.com/Legend-of-Arcadia/Multisig.git", rev="mainnet"}
 
 [addresses]
-#loa =  "0x0"
+loa =  "0x0"
 Sui =  "0x2"
 std =  "0x1"
-loa = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
+#loa = "0x440e87f9bfb2a33d24e23011e8cdff710e1f4b37203b33ca7c9452462640085"
