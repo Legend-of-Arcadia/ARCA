@@ -18,11 +18,19 @@ function printSuiAddress(): void {
     console.log('SUI Address:', publicKey.toSuiAddress());
 }
 
+function printSuiAddressFromAwsBase64Key(): void {
+    const arrayKey = fromB64(process.argv[3].trim())
+    const publicKey = new Secp256k1PublicKey(arrayKey.slice(1));
+    console.log('SUI Address:', publicKey.toSuiAddress());
+}
+
 async function main() {
     const args = process.argv;
     let cmd = args[2];
     if (cmd === "suiAddress") {
         printSuiAddress();
+    }else if (cmd === "suiAddressFromBase64Key") {
+        printSuiAddressFromAwsBase64Key();
     }
 }
 main()

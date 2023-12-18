@@ -9,7 +9,8 @@
   "scripts": {
     "publish": "ts-node scripts/index.ts publish",
     "upgrade": "ts-node scripts/index.ts upgrade 0x75351cdf31df6b4d288a0d0fec6c161a994e7b8d4097ce23f83baa2d51870d0b 0xa49487d022309ea89514d994deb59a216b8ea268652af01daaee2d93a877afd0",
-    "util-suiAddress": "ts-node scripts/utils.ts suiAddress"
+    "util-suiAddress": "ts-node scripts/utils.ts suiAddress",
+    "util-suiAddressFromBase64Key": "ts-node scripts/utils.ts suiAddressFromBase64Key"
   },
   "author": "",
   "license": "ISC",
