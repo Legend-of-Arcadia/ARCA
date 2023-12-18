@@ -48,6 +48,9 @@ async function getSigner(): Promise<SignerWithProvider> {
       provider
     );
   } else {
+    if (process.env.FORCE_KMS === "true") {
+      return new KmsSigner(provider);
+    }
     return new HDSigner(provider);
   }
 }
